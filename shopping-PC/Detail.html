@@ -1,0 +1,26 @@
+<script>
+    dataLayer.push({
+        'event' : 'detail',
+        'ecommerce' : {
+            'detail' : {
+                'products'  : [{
+                    'id'    : 123456,       //상품코드 : prdNo 
+                    'name'  : '',           //상품명   : 상품명
+                    'price' : 193300,       //상품가격 : 193300 
+                    'brand' : '',           //상품브랜드 : 1순위 브랜드명, 2순위 판매자명 (데이터 없을경우 공백)
+                    'category' : '',        //카테고리 : 대카테고리^중카테고리^소카테고리 (띄어쓰기없음)(중간에 ^ 주의)
+                    'variant'  : '',        //상품옵션 : 옵션1^옵션2^옵션3 (띄어쓰기없음)(데이터 없을경우 공백)(중간에 ^ 주의)
+                    'quantity' : 1,         //구매수량 : 1 OR 2... 
+                    'dimension1' : '',      //암호화된 회원번호 (디코딩처리)
+                    'dimension2' : '',      //성별, 문자형 : 1 OR 2
+                    'dimension3' : '',      //연령, 문자형/대문자 ex) 0A27P
+                    'dimension5' : '',      //회원등급, 문자형, 대문자 : WELCOME, FAMILY, VIP, VVIP
+                    'dimension17': '',      //대 카테고리 : 쇼핑
+                    'dimension18': '',      //중 카테고리 : 엑셀파일 내 Dimension 18 쎌 참조.
+                    'dimension19': '',      //디바이스 구분 : PC_Web
+                    'dimension20': ''       //소 카테고리 : 엑셀파일 내 Dimension 20 쎌 참조.
+                }]
+            }
+        }
+    });
+</script>
