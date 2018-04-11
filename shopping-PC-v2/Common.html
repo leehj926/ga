@@ -1,0 +1,37 @@
+<html>
+<head>
+.
+.
+.
+<!--반드시 head 에 작성되어야 합니다-->
+<script>
+    var dataLayer = [{
+        'uid' : getCookie(''),              //암호화된 회원번호 (디코딩처리)
+        'CD1' : getCookie(''),              //암호화된 회원번호 (디코딩처리)
+        'CD2' : '',                         //성별, 문자형 : 1 OR 2
+        'CD3' : '',                         //연령, 문자형/대문자 ex) 0A27P
+        'CD5' : '',                         //회원등급, 문자형, 대문자 : WELCOME, FAMILY, VIP, VVIP
+        'CD17' : '',                        //대 카테고리 : 쇼핑
+        'CD18' : '',                        //중 카테고리 : 엑셀파일 내 Dimension 18 쎌 참조.
+        'CD19' : '',                        //디바이스 구분 : PC_Web
+        'CD20' : ''                        //소 카테고리 : 엑셀파일 내 Dimension 20 쎌 참조.
+                                           //depth1,2,3은 cd17,18,20와 동일하고, GTM에서 ga tracking variable로 페이지뷰 custom dimension 처리 되고 있기 때문에, custom dimension 삭제 처리하였습니다.
+    }];
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-W8799HK');
+</script>
+</head>
+
+<body>
+.
+.
+.
+<!--반드시 body 하단에 작성되어야 합니다-->
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8799HK" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+</body>
+</html>
