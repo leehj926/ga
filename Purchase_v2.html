@@ -1,0 +1,42 @@
+<script>
+    dataLayer.push({ //주문완료 페이지에서 이벤트 발생 (ex.쇼핑 - order/ordercomplete.do | 도서 -order/ordercomplete.do) 
+        'event' : 'purchase',
+        'metric1' : 30000,                         //I-point 사용금액. (데이터 없으면 0)
+        'metric2' : 30000,                         //쿠폰 사용금액 (데이터 없으면 0)
+        'metric3' : 30000,                         //s-money 사용금액 (데이터 없으면 0)
+        'metric4' : 30000,                         //기타 제휴 포인트 사용 금액 (OK캐쉬백, L포인트등..) (데이터 없으면 0)
+        'metric7' : 40000,                         //총 금액에서 metric 1,2,3,4를 제외한 금액 (데이터 없으면 0)
+        'metric9' : 10000,                         //사용자 I-point 보유금액 
+        'purchaseId' : '123456789',                //주문 번호 (변수 타입 'String') (아래 actionField에도 있지만 한번 더 넣어줍니다)
+            'ecommerce' : {
+                'purchase' : {
+                    'actionField' : {
+                        'id' : '123456789',         //주문번호 (변수 타입 String)
+                        'affiliation' : '000000',   //제휴정보 IPP 코드 ex)P12345 (데이터가 없으면 기본코드 000000) (변수 타입 String) 
+                        'revenue' : 160000,        //총결제금액
+                        'tax' : 0,                 //세금 (데이터없으면 0)
+                        'coupon' : '',             //쿠폰명^쿠폰명 : ({COUPON NO}_TITLE, 쿠폰 두개 이상일때 쿠폰1^쿠폰2로 구분자사용)(데이터 없으면 공백) 
+                        },
+                    'products' : [{
+                        'id' : '123456789',         //상품코드
+                        'name' : '',               //상품명
+                        'price' : 80000,           //상품가격
+                        'brand' : '',              //상품브랜드 : 1순위 브랜드명, 2순위 판매자명 (데이터 없을경우 공백)
+                        'category' : '',           //카테고리 : 대카테고리^중카테고리^소카테고리 (띄어쓰기없음)(중간에 ^ 주의)
+                        'variant' : '',            //상품옵션 : 옵션1^옵션2^옵션3 (띄어쓰기없음)(데이터 없을경우 공백)(중간에 ^ 주의)
+                        'quantity' : 3,            //구매수량 : 1 OR 2...
+                   
+                    },{
+                        'id' : '123456789',          
+                        'name' : '',               
+                        'price' : 80000,           
+                        'brand' : '',              
+                        'category' : '',           
+                        'variant' : '',            
+                        'quantity' : 3,            
+                     
+                    }]
+                } //쇼핑 또는 도서의 경우 복합결제를 하면,product가 2개 이상의 경우, CD18, 20이 각각 2개 이상의 카테고리 정보가 중복으로 들어갈 수 없기 때문에 custom demension을 삭제 처리하였습니다.
+            }
+         });
+</script>

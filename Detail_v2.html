@@ -1,0 +1,22 @@
+<script>
+    dataLayer.push({
+        'event' : 'detail', // 페이지 로드 시, detail 이벤트 발생(ex.쇼핑-/product/productInfo.do | 도서 - /product/BookDisplay.do )
+        'ecommerce' : {
+            'detail' : {
+                'products'  : [{
+                    'id'    : '123456',     //상품코드 : prdNo(변수 타입 : String)
+                    'name'  : '',           //상품명   : 상품명
+                    'price' : 193300,       //상품가격 : 193300 
+                    'brand' : '',           //상품브랜드 : 1순위 브랜드명, 2순위 판매자명 (데이터 없을경우 공백)
+                    'category' : '',        //카테고리 : 대카테고리^중카테고리^소카테고리 (띄어쓰기없음)(중간에 ^ 주의)
+                    //이미 뎁스정보가 '/' 를 가지고 있다면 ^로 치환 합니다.
+                    //ex) 쇼핑 - 화장품/스킨^로션/스킨^토너
+                    
+                    // 'variant' 삭제  
+                    // 'quantity' 삭제
+                    //GTM에서 ga tracking variable로 페이지뷰 custom dimension 처리 되고 있기 때문에, custom dimension 삭제 처리하였습니다.
+                }]
+            }
+        }
+    });
+</script>

@@ -1,0 +1,17 @@
+<script>
+    try {
+        dataLayer.push({
+            'event' : 'checkout',
+            'ecommerce' : {
+                'checkout' : {
+                    'actionField' : {
+                        'step' : 1,
+                        'option' : '신용카드^아이포인트^S머니'   //결제수단정보, (이 다음 Step가 없는 경우에만 option 노출), 엑셀파일 "option_checkout" 컬럼 참조. 내용 주의
+                    }
+                }
+            }
+        });
+    } catch(err) {
+    
+    }
+</script>
